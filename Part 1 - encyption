@@ -1,0 +1,34 @@
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+
+def encrypt():
+  count1 = 0
+  count2 = 0
+  for b in text:
+    encyption.append(alphabet.index(text[count1]))
+    count1 += 1
+  
+  for x in range(0, shift):
+    alphabet.insert(0, alphabet[-1])
+    alphabet.pop(-1)
+
+  checker = len(encyption)
+  for check in range(checker):
+    checking.append(alphabet[encyption[count2]])
+    count2 += 1
+
+  
+
+encyption = []
+checking = []
+answer = ""
+if direction == "encode":
+  encrypt()
+  for word in checking:
+    answer += word
+  print(f"The coded text is {answer}.")
